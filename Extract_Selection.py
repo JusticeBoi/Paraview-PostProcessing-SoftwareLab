@@ -18,10 +18,9 @@ clean_start()
 #copied from trace, hopefully helps?
 paraview.simple._DisableFirstRenderCameraReset()
 
-#test
 
 #Directory information. You should change it.
-object_directory="/home/oguz/Desktop/tum/softwarelab/paraview_vtufiles/"
+object_directory="C:\Users\Darwin\OneDrive\TUM\2. Semester\Software Lab\paraview_vtufiles"
 cube="EmbeddedSphere_0.vtu"
 sphere="EmbeddedSphere_wholeSurface_0.vtu"
 
