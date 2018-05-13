@@ -70,19 +70,19 @@ renderView1.Update()
 
 
 # Now we prepare for changing the main view from Render view to Spreadsheet view.
-Delete(renderView1) 
-del renderView1
+#Delete(renderView1) 
+#del renderView1
 
 #Create a new SphreadSheetView
-spreadSheetView1 = CreateView('SpreadSheetView')
-
-#Some default properties.
-spreadSheetView1.ColumnToSort = ''
-spreadSheetView1.BlockSize = 1024L
-
-#Some layout settings to decide how the spreadsheetview is displayed on the window
-layout1=GetLayout()
-layout1.AssignView(0, spreadSheetView1)
+    spreadSheetView1 = CreateView('SpreadSheetView')
+    
+    #Some default properties.
+    spreadSheetView1.ColumnToSort = ''
+    spreadSheetView1.BlockSize = 1024L
+    
+    #Some layout settings to decide how the spreadsheetview is displayed on the window
+    layout1=GetLayout()
+    layout1.AssignView(0, spreadSheetView1)
 
 #show the extracted part in spreadsheetview
 extract_loc_disp=Show(extract_loc,spreadSheetView1)
@@ -94,14 +94,14 @@ extract_loc_disp.SetPropertyWithName('FieldAssociation',1)
 # input 0 directs the user to save the selected cell in a vtu format in a new directory.
 where_to_save=int(raw_input('Saving the file the same location where your object is %s, if OK press 1, if not ok press 0\n\n' %object_directory))
 if where_to_save==1:
-    name=raw_input('name of the vtk file(without .vtu): \n\n')
+    name=raw_input('name of the vtu file(without .vtu): \n\n')
     directory_input=object_directory+name+'.vtu'
     SaveData(directory_input, proxy=extract_loc)
 elif where_to_save==0:
-    name=raw_input('name of the vtk file(without .vtu): \n\n')
+    name=raw_input('name of the vtu file(without .vtu): \n\n')
     new_save_loc=raw_input('Write the directory of the file (i.e. /home/oguz/Desktop/) \n\n')
     directory_input=new_save_loc+name+'.vtu'
-    SaveData(object_directory, proxy=extractLocation1)
+    SaveData(object_directory, proxy=extract_loc)
     
 #To see the properties of any object, just get the ListProperties() function, like shown below, and it will show which properties
     # you can set. Setting a property is also shown below
