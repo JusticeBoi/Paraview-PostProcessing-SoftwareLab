@@ -40,6 +40,7 @@ SetActiveSource(r1)
 
 
 #Get the input parameters as floats
+#try for example 0.5, 0.5, 0.5 
 ext_loc_x=float(input("X coord of the location: \n\n"))
 
 ext_loc_y=float(input("Y coord of the location: \n\n"))
