@@ -18,7 +18,7 @@ clean_start()
 #copied from trace, hopefully helps?
 paraview.simple._DisableFirstRenderCameraReset()
 
-
+#test
 
 #Directory information. You should change it.
 object_directory="/home/oguz/Desktop/tum/softwarelab/paraview_vtufiles/"
