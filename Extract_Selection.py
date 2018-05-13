@@ -7,7 +7,6 @@ Created on Fri May 11 13:29:10 2018
 """
 
 #When in python shell of paraview, with this func have a clean start.
-#yes
 def clean_start():
     Disconnect()    
     Connect()
@@ -105,12 +104,10 @@ elif where_to_save==0:
     SaveData(object_directory, proxy=extractLocation1)
     
 #To see the properties of any object, just get the ListProperties() function, like shown below, and it will show which properties
-    # you can set. Setting a property is also shown below.
-
-<<<<<<< HEAD
-#''##extract_loc_disp.ListProperties()
-=======
-##extract_loc_disp.ListProperties()
->>>>>>> remotes/origin/master
+    # you can set. Setting a property is also shown below
+    
+    
+#extract_loc_disp.ListProperties()
+#
 #spreadSheetView1.SetPropertyWithName('SelectionOnly',1)
-# spreadSheetView1.SetPropertyWithName('SelectionOnly',0)
+#spreadSheetView1.SetPropertyWithName('SelectionOnly',0)
