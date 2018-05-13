@@ -21,7 +21,7 @@ paraview.simple._DisableFirstRenderCameraReset()
 
 
 #Directory information. You should change it.
-object_directory="C:\Users\Darwin\OneDrive\TUM\2. Semester\Software Lab\paraview_vtufiles"
+object_directory="C:\Users\Darwin\OneDrive\TUM\Softwarelab\paraview_vtufiles\\"
 cube="EmbeddedSphere_0.vtu"
 sphere="EmbeddedSphere_wholeSurface_0.vtu"
 
@@ -94,15 +94,16 @@ extract_loc_disp.SetPropertyWithName('FieldAssociation',1)
 # input 1 directs  the user to save the selected cell in a vtu format in the same place as the object directory
 # input 0 directs the user to save the selected cell in a vtu format in a new directory.
 where_to_save=int(raw_input('Saving the file the same location where your object is %s, if OK press 1, if not ok press 0\n\n' %object_directory))
-if where_to_save==1:
-    name=raw_input('name of the vtk file(without .vtu): \n\n')
-    directory_input=object_directory+name+'.vtu'
-    SaveData(directory_input, proxy=extract_loc)
-elif where_to_save==0:
-    name=raw_input('name of the vtk file(without .vtu): \n\n')
-    new_save_loc=raw_input('Write the directory of the file (i.e. /home/oguz/Desktop/) \n\n')
-    directory_input=new_save_loc+name+'.vtu'
-    SaveData(object_directory, proxy=extractLocation1)
+while where_to_save != 1 && where_to_save != 0
+	if where_to_save==1:
+		name=raw_input('name of the vtk file(without .vtu): \n\n')
+		directory_input=object_directory+name+'.vtu'
+		SaveData(directory_input, proxy=extract_loc)
+	elif where_to_save==0:
+		name=raw_input('name of the vtk file(without .vtu): \n\n')
+		new_save_loc=raw_input('Write the directory of the file (i.e. /home/oguz/Desktop/) \n\n')
+		directory_input=new_save_loc+name+'.vtu'
+		SaveData(object_directory, proxy=extractLocation1)
     
 #To see the properties of any object, just get the ListProperties() function, like shown below, and it will show which properties
     # you can set. Setting a property is also shown below
