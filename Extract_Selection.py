@@ -5,6 +5,7 @@ Created on Fri May 11 13:29:10 2018
 
 @author: oguz
 """
+import paraview
 
 #When in python shell of paraview, with this func have a clean start.
 def clean_start():
