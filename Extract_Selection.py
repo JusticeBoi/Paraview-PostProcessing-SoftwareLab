@@ -7,6 +7,7 @@ Created on Fri May 11 13:29:10 2018
 """
 
 #When in python shell of paraview, with this func have a clean start.
+#yes
 def clean_start():
     Disconnect()    
     Connect()
