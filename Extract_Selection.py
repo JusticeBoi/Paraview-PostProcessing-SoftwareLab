@@ -106,6 +106,10 @@ elif where_to_save==0:
 #To see the properties of any object, just get the ListProperties() function, like shown below, and it will show which properties
     # you can set. Setting a property is also shown below.
 
+<<<<<<< HEAD
 #''##extract_loc_disp.ListProperties()
+=======
+##extract_loc_disp.ListProperties()
+>>>>>>> remotes/origin/master
 #spreadSheetView1.SetPropertyWithName('SelectionOnly',1)
 # spreadSheetView1.SetPropertyWithName('SelectionOnly',0)
