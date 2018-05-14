@@ -75,15 +75,15 @@ renderView1.Update()
 #del renderView1
 
 #Create a new SphreadSheetView
-    spreadSheetView1 = CreateView('SpreadSheetView')
+spreadSheetView1 = CreateView('SpreadSheetView')
     
-    #Some default properties.
-    spreadSheetView1.ColumnToSort = ''
-    spreadSheetView1.BlockSize = 1024L
+ #Some default properties.
+spreadSheetView1.ColumnToSort = ''
+spreadSheetView1.BlockSize = 1024L
     
-    #Some layout settings to decide how the spreadsheetview is displayed on the window
-    layout1=GetLayout()
-    layout1.AssignView(0, spreadSheetView1)
+## PREVIOUSLY THERE WERE SOME LAYOUT STUFF WAS HERE.
+## CAUSED ERRORS SO I JUST DELELTED IT AND IT WORKS FINE, FOR NOW xD.
+
 
 #show the extracted part in spreadsheetview
 extract_loc_disp=Show(extract_loc,spreadSheetView1)
@@ -91,24 +91,42 @@ extract_loc_disp=Show(extract_loc,spreadSheetView1)
 #Shows the Cell Data for 1, Shows the Point Data for 0
 extract_loc_disp.SetPropertyWithName('FieldAssociation',1)
 
+
+
+#This is something i found, which seems easier and the format is just like the given geometry's format.
+#In my pc this is saved in /Home/selected_point.vtu
+writer = XMLUnstructuredGridWriter(FileName="selected_point.vtu")
+writer.UpdatePipeline()
+
+
+
+
+
+##OLD WAY OF SAVING
+
 # input 1 directs  the user to save the selected cell in a vtu format in the same place as the object directory
 # input 0 directs the user to save the selected cell in a vtu format in a new directory.
-where_to_save=int(raw_input('Saving the file the same location where your object is %s, if OK press 1, if not ok press 0\n\n' %object_directory))
-if where_to_save==1:
-    name=raw_input('name of the vtu file(without .vtu): \n\n')
-    directory_input=object_directory+name+'.vtu'
-    SaveData(directory_input, proxy=extract_loc)
-elif where_to_save==0:
-    name=raw_input('name of the vtu file(without .vtu): \n\n')
-    new_save_loc=raw_input('Write the directory of the file (i.e. /home/oguz/Desktop/) \n\n')
-    directory_input=new_save_loc+name+'.vtu'
-    SaveData(object_directory, proxy=extract_loc)
+
+#where_to_save=int(raw_input('Saving the file the same location where your object is %s, if OK press 1, if not ok press 0\n\n' %object_directory))
+#if where_to_save==1:
+#    name=raw_input('name of the vtu file(without .vtu): \n\n')
+#    directory_input=object_directory+name+'.vtu'
+#    SaveData(directory_input, proxy=extract_loc)
+#elif where_to_save==0:
+#    name=raw_input('name of the vtu file(without .vtu): \n\n')
+#    new_save_loc=raw_input('Write the directory of the file (i.e. /home/oguz/Desktop/) \n\n')
+#    directory_input=new_save_loc+name+'.vtu'
+#    SaveData(object_directory, proxy=extract_loc)
     
-#To see the properties of any object, just get the ListProperties() function, like shown below, and it will show which properties
+
+##OLD WAY OF SAVING FINISHED HERE
+
+
+##To see the properties of any object, just get the ListProperties() function, like shown below, and it will show which properties
     # you can set. Setting a property is also shown below
     
     
-#extract_loc_disp.ListProperties()
-#
-#spreadSheetView1.SetPropertyWithName('SelectionOnly',1)
-#spreadSheetView1.SetPropertyWithName('SelectionOnly',0)
+##extract_loc_disp.ListProperties()
+##
+##spreadSheetView1.SetPropertyWithName('SelectionOnly',1)
+##spreadSheetView1.SetPropertyWithName('SelectionOnly',0)
