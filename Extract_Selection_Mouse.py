@@ -7,16 +7,25 @@ Created on Sun May 13 19:12:41 2018
 """
 
 from paraview.simple import *
-import vtk
 
-import time
-import threading
-import sys
+
+## Run this script, with proper source directories, and select some cells or points using the renderview GUI. 
+
+## When you are done selecting, simply call SaveSelection() from the paraview python shell to Save the selection -
+
+## as an unstructured grid in a xml-based vtk data file .
+
+## ShowAndSaveSelection() Shows both the RenderView and SpreadSheetView of the selected points/cells and saves it just like SaveSelection().
+
+
+
+
+
 
 def clean_start():
     Disconnect()    
     Connect()
-    return
+    
 
 #GetSelectionSource function written by Utkarsh Ayachit from kitware.com
 #Basically returns the selected parts, which will be used as ExtractSelection's parameter.
@@ -67,7 +76,7 @@ SetActiveSource(r1)
 #This one creates another layout, in which the selected points/cells are shown in spreadsheetview.
 #In the original layout the selected part's RenderView is shown.
 #Finally the selected part is saved by writer.
-def ShowAndSave():
+def ShowAndSaveSelection():
     
     
     active_selection = GetSelectionSource()
@@ -109,8 +118,8 @@ def ShowAndSave():
     RenderAllViews()
     ex_sel.UpdatePipeline()
     
-    
-    writer = XMLUnstructuredGridWriter(FileName="mygrid2.vtu")
+    #Saving procedure
+    writer = XMLUnstructuredGridWriter(FileName="Mouse_Selected.vtu")
     writer.UpdatePipeline()
     del writer
     Delete()
@@ -124,7 +133,7 @@ def SaveSelection():
     
     
     #Saving procedure
-    writer = XMLUnstructuredGridWriter(FileName="mygrid5.vtu")
+    writer = XMLUnstructuredGridWriter(FileName="Mouse_Selected.vtu")
     writer.UpdatePipeline()
     del writer
     Delete()
@@ -132,6 +141,16 @@ def SaveSelection():
    
         
     
+    
+    
+    
+    
+    
+    
 
 
-#    spreadSheetView1.SetPropertyWithName('SelectionOnly',1)
+
+
+
+
+#spreadSheetView1.SetPropertyWithName('SelectionOnly',1)
