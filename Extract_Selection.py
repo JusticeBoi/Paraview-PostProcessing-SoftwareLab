@@ -97,6 +97,8 @@ extract_loc_disp.SetPropertyWithName('FieldAssociation',1)
 #In my pc this is saved in /Home/selected_point.vtu
 writer = XMLUnstructuredGridWriter(FileName="selected_point.vtu")
 writer.UpdatePipeline()
+del writer
+Delete()
 
 
 
