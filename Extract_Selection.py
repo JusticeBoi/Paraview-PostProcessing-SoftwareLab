@@ -93,8 +93,9 @@ extract_loc_disp.SetPropertyWithName('FieldAssociation',1)
 
 # input 1 directs  the user to save the selected cell in a vtu format in the same place as the object directory
 # input 0 directs the user to save the selected cell in a vtu format in a new directory.
-where_to_save=int(raw_input('Saving the file the same location where your object is %s, if OK press 1, if not ok press 0\n\n' %object_directory))
-while where_to_save != 1 && where_to_save != 0
+where_to_save = 3
+while where_to_save != 1 and where_to_save != 0:
+	where_to_save=int(raw_input('Saving the file the same location where your object is %s, if OK press 1, if not ok press 0\n\n' %object_directory))
 	if where_to_save==1:
 		name=raw_input('name of the vtk file(without .vtu): \n\n')
 		directory_input=object_directory+name+'.vtu'
