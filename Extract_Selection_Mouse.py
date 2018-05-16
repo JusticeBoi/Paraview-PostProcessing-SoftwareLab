@@ -54,7 +54,8 @@ paraview.simple._DisableFirstRenderCameraReset()
 
 
 #Directory information. You should change it.
-object_directory="/home/oguz/Desktop/tum/softwarelab/paraview_vtufiles/"
+object_directory="C:\Users\Darwin\OneDrive\TUM\Softwarelab\paraview_vtufiles\\"
+#object_directory="/home/oguz/Desktop/tum/softwarelab/paraview_vtufiles/"
 cube="EmbeddedSphere_0.vtu"
 sphere="EmbeddedSphere_wholeSurface_0.vtu"
 
