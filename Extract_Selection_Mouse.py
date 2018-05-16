@@ -122,7 +122,7 @@ def ShowAndSaveSelection():
     writer = XMLUnstructuredGridWriter(FileName="Mouse_Selected.vtu")
     writer.UpdatePipeline()
     del writer
-    Delete()
+
     
     
     #A lot simpler and cleaner function, which just saves the selected data.
@@ -136,7 +136,7 @@ def SaveSelection():
     writer = XMLUnstructuredGridWriter(FileName="Mouse_Selected.vtu")
     writer.UpdatePipeline()
     del writer
-    Delete()
+   
     
    
         

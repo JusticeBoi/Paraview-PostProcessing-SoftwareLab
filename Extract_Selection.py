@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+    #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
 Created on Fri May 11 13:29:10 2018
@@ -87,6 +87,8 @@ spreadSheetView1.BlockSize = 1024L
 
 #show the extracted part in spreadsheetview
 extract_loc_disp=Show(extract_loc,spreadSheetView1)
+spreadSheetView1.Update()
+RenderAllViews()
 
 #Shows the Cell Data for 1, Shows the Point Data for 0
 extract_loc_disp.SetPropertyWithName('FieldAssociation',1)
@@ -98,7 +100,7 @@ extract_loc_disp.SetPropertyWithName('FieldAssociation',1)
 writer = XMLUnstructuredGridWriter(FileName="selected_point.vtu")
 writer.UpdatePipeline()
 del writer
-Delete()
+
 
 
 
