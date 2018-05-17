@@ -1,10 +1,20 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Fri May 11 13:29:10 2018
+### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
 
-@author: oguz
-"""
+### May 2018
+
+
+### HOW IT WORKS
+
+## Run script, it will ask x,y,z coordinates respectively, of a point and it will show and save the cell that
+
+## contains that point. The default saving format is MLUnstructuredGrid, .vtu .
+
+
+from paraview.simple import *
 
 #When in python shell of paraview, with this func have a clean start.
 def clean_start():
@@ -88,6 +98,8 @@ spreadSheetView1.BlockSize = 1024L
 
 #show the extracted part in spreadsheetview
 extract_loc_disp=Show(extract_loc,spreadSheetView1)
+spreadSheetView1.Update()
+RenderAllViews()
 
 #Shows the Cell Data for 1, Shows the Point Data for 0
 extract_loc_disp.SetPropertyWithName('FieldAssociation',1)
@@ -99,7 +111,7 @@ extract_loc_disp.SetPropertyWithName('FieldAssociation',1)
 writer = XMLUnstructuredGridWriter(FileName="selected_point.vtu")
 writer.UpdatePipeline()
 del writer
-Delete()
+
 
 
 
@@ -111,15 +123,60 @@ Delete()
 # input 0 directs the user to save the selected cell in a vtu format in a new directory.
 
 #where_to_save=int(raw_input('Saving the file the same location where your object is %s, if OK press 1, if not ok press 0\n\n' %object_directory))
-#if where_to_save==1:
-#    name=raw_input('name of the vtu file(without .vtu): \n\n')
-#    directory_input=object_directory+name+'.vtu'
-#    SaveData(directory_input, proxy=extract_loc)
-#elif where_to_save==0:
-#    name=raw_input('name of the vtu file(without .vtu): \n\n')
-#    new_save_loc=raw_input('Write the directory of the file (i.e. /home/oguz/Desktop/) \n\n')
-#    directory_input=new_save_loc+name+'.vtu'
-#    SaveData(object_directory, proxy=extract_loc)
+#if where_### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
+to_save==1:
+#    name=### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
+raw_input('name of the vtu file(without .vtu): \n\n')
+#    direc### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
+tory_input=object_directory+name+'.vtu'
+#    SaveD### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
+ata(directory_input, proxy=extract_loc)
+#elif wher### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
+e_to_save==0:
+#    name=### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
+raw_input('name of the vtu file(without .vtu): \n\n')
+#    new_s### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
+ave_loc=raw_input('Write the directory of the file (i.e. /home/oguz/Desktop/) \n\n')
+#    direc### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
+tory_input=new_save_loc+name+'.vtu'
+#    SaveD### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
+ata(object_directory, proxy=extract_loc)
     
 
 ##OLD WAY OF SAVING FINISHED HERE

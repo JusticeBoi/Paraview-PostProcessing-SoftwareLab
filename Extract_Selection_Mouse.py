@@ -1,13 +1,14 @@
-#!/usr/bin/env python3
-# -*- coding: utf-8 -*-
-"""
-Created on Sun May 13 19:12:41 2018
+### SOFTWARE LAB 2018
+### Phyton-based Paraview sPostProcessor
+### Students: Oguz Oztoprak & Darwin Droll
+### Supervisors: John Jomo & Benjamin Wassermann
+### Disclaimer: Works on our machine, soo.
 
-@author: oguz
-"""
+##' May 2018
 
-from paraview.simple import *
 
+
+### HOW IT WORKS
 
 ## Run this script, with proper source directories, and select some cells or points using the renderview GUI. 
 
@@ -18,9 +19,7 @@ from paraview.simple import *
 ## ShowAndSaveSelection() Shows both the RenderView and SpreadSheetView of the selected points/cells and saves it just like SaveSelection().
 
 
-
-
-
+from paraview.simple import *
 
 def clean_start():
     Disconnect()    
@@ -123,7 +122,7 @@ def ShowAndSaveSelection():
     writer = XMLUnstructuredGridWriter(FileName="Mouse_Selected.vtu")
     writer.UpdatePipeline()
     del writer
-    Delete()
+
     
     
     #A lot simpler and cleaner function, which just saves the selected data.
@@ -137,7 +136,7 @@ def SaveSelection():
     writer = XMLUnstructuredGridWriter(FileName="Mouse_Selected.vtu")
     writer.UpdatePipeline()
     del writer
-    Delete()
+   
     
    
         
