@@ -116,76 +116,76 @@ del writer
 
 
 
-##OLD WAY OF SAVING
+# # ##OLD WAY OF SAVING
 
-# input 1 directs  the user to save the selected cell in a vtu format in the same place as the object directory
-# input 0 directs the user to save the selected cell in a vtu format in a new directory.
+# # # input 1 directs  the user to save the selected cell in a vtu format in the same place as the object directory
+# # # input 0 directs the user to save the selected cell in a vtu format in a new directory.
 
-#where_to_save=int(raw_input('Saving the file the same location where your object is %s, if OK press 1, if not ok press 0\n\n' %object_directory))
-#if where_### SOFTWARE LAB 2018
-### Phyton-based Paraview sPostProcessor
-### Students: Oguz Oztoprak & Darwin Droll
-### Supervisors: John Jomo & Benjamin Wassermann
-### Disclaimer: Works on our machine, soo.
-to_save==1:
-#    name=### SOFTWARE LAB 2018
-### Phyton-based Paraview sPostProcessor
-### Students: Oguz Oztoprak & Darwin Droll
-### Supervisors: John Jomo & Benjamin Wassermann
-### Disclaimer: Works on our machine, soo.
-raw_input('name of the vtu file(without .vtu): \n\n')
-#    direc### SOFTWARE LAB 2018
-### Phyton-based Paraview sPostProcessor
-### Students: Oguz Oztoprak & Darwin Droll
-### Supervisors: John Jomo & Benjamin Wassermann
-### Disclaimer: Works on our machine, soo.
-tory_input=object_directory+name+'.vtu'
-#    SaveD### SOFTWARE LAB 2018
-### Phyton-based Paraview sPostProcessor
-### Students: Oguz Oztoprak & Darwin Droll
-### Supervisors: John Jomo & Benjamin Wassermann
-### Disclaimer: Works on our machine, soo.
-ata(directory_input, proxy=extract_loc)
-#elif wher### SOFTWARE LAB 2018
-### Phyton-based Paraview sPostProcessor
-### Students: Oguz Oztoprak & Darwin Droll
-### Supervisors: John Jomo & Benjamin Wassermann
-### Disclaimer: Works on our machine, soo.
-e_to_save==0:
-#    name=### SOFTWARE LAB 2018
-### Phyton-based Paraview sPostProcessor
-### Students: Oguz Oztoprak & Darwin Droll
-### Supervisors: John Jomo & Benjamin Wassermann
-### Disclaimer: Works on our machine, soo.
-raw_input('name of the vtu file(without .vtu): \n\n')
-#    new_s### SOFTWARE LAB 2018
-### Phyton-based Paraview sPostProcessor
-### Students: Oguz Oztoprak & Darwin Droll
-### Supervisors: John Jomo & Benjamin Wassermann
-### Disclaimer: Works on our machine, soo.
-ave_loc=raw_input('Write the directory of the file (i.e. /home/oguz/Desktop/) \n\n')
-#    direc### SOFTWARE LAB 2018
-### Phyton-based Paraview sPostProcessor
-### Students: Oguz Oztoprak & Darwin Droll
-### Supervisors: John Jomo & Benjamin Wassermann
-### Disclaimer: Works on our machine, soo.
-tory_input=new_save_loc+name+'.vtu'
-#    SaveD### SOFTWARE LAB 2018
-### Phyton-based Paraview sPostProcessor
-### Students: Oguz Oztoprak & Darwin Droll
-### Supervisors: John Jomo & Benjamin Wassermann
-### Disclaimer: Works on our machine, soo.
-ata(object_directory, proxy=extract_loc)
+# # #where_to_save=int(raw_input('Saving the file the same location where your object is %s, if OK press 1, if not ok press 0\n\n' %object_directory))
+# # #if where_### SOFTWARE LAB 2018
+# # ### Phyton-based Paraview sPostProcessor
+# # ### Students: Oguz Oztoprak & Darwin Droll
+# # ### Supervisors: John Jomo & Benjamin Wassermann
+# # ### Disclaimer: Works on our machine, soo.
+# # ##to_save==1:
+# # #    name=### SOFTWARE LAB 2018
+# # ### Phyton-based Paraview sPostProcessor
+# # ### Students: Oguz Oztoprak & Darwin Droll
+# # ### Supervisors: John Jomo & Benjamin Wassermann
+# # ### Disclaimer: Works on our machine, soo.
+# # raw_input('name of the vtu file(without .vtu): \n\n')
+# # #    direc### SOFTWARE LAB 2018
+# # ### Phyton-based Paraview sPostProcessor
+# # ### Students: Oguz Oztoprak & Darwin Droll
+# # ### Supervisors: John Jomo & Benjamin Wassermann
+# # ### Disclaimer: Works on our machine, soo.
+# # tory_input=object_directory+name+'.vtu'
+# # #    SaveD### SOFTWARE LAB 2018
+# # ### Phyton-based Paraview sPostProcessor
+# # ### Students: Oguz Oztoprak & Darwin Droll
+# # ### Supervisors: John Jomo & Benjamin Wassermann
+# # ### Disclaimer: Works on our machine, soo.
+# # ata(directory_input, proxy=extract_loc)
+# # #elif wher### SOFTWARE LAB 2018
+# # ### Phyton-based Paraview sPostProcessor
+# # ### Students: Oguz Oztoprak & Darwin Droll
+# # ### Supervisors: John Jomo & Benjamin Wassermann
+# # ### Disclaimer: Works on our machine, soo.
+# # e_to_save==0:
+# # #    name=### SOFTWARE LAB 2018
+# # ### Phyton-based Paraview sPostProcessor
+# # ### Students: Oguz Oztoprak & Darwin Droll
+# # ### Supervisors: John Jomo & Benjamin Wassermann
+# # ### Disclaimer: Works on our machine, soo.
+# # raw_input('name of the vtu file(without .vtu): \n\n')
+# # #    new_s### SOFTWARE LAB 2018
+# # ### Phyton-based Paraview sPostProcessor
+# # ### Students: Oguz Oztoprak & Darwin Droll
+# # ### Supervisors: John Jomo & Benjamin Wassermann
+# # ### Disclaimer: Works on our machine, soo.
+# # ave_loc=raw_input('Write the directory of the file (i.e. /home/oguz/Desktop/) \n\n')
+# # #    direc### SOFTWARE LAB 2018
+# # ### Phyton-based Paraview sPostProcessor
+# # ### Students: Oguz Oztoprak & Darwin Droll
+# # ### Supervisors: John Jomo & Benjamin Wassermann
+# # ### Disclaimer: Works on our machine, soo.
+# # tory_input=new_save_loc+name+'.vtu'
+# # #    SaveD### SOFTWARE LAB 2018
+# # ### Phyton-based Paraview sPostProcessor
+# # ### Students: Oguz Oztoprak & Darwin Droll
+# # ### Supervisors: John Jomo & Benjamin Wassermann
+# # ### Disclaimer: Works on our machine, soo.
+# # ata(object_directory, proxy=extract_loc)
     
 
-##OLD WAY OF SAVING FINISHED HERE
+# # ##OLD WAY OF SAVING FINISHED HERE
 
 
-##To see the properties of any object, just get the ListProperties() function, like shown below, and it will show which properties
-    # you can set. Setting a property is also shown below
+# # ##To see the properties of any object, just get the ListProperties() function, like shown below, and it will show which properties
+# #     # you can set. Setting a property is also shown below
     
     
-##extract_loc_disp.ListProperties()
-##
-##spreadSheetView1.SetPropertyWithName('SelectionOnly',1)
-##spreadSheetView1.SetPropertyWithName('SelectionOnly',0)
+# # ##extract_loc_disp.ListProperties()
+# # ##
+# # ##spreadSheetView1.SetPropertyWithName('SelectionOnly',1)
+# # ##spreadSheetView1.SetPropertyWithName('SelectionOnly',0)
