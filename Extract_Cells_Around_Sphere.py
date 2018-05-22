@@ -24,12 +24,14 @@ sphere="EmbeddedSphere_wholeSurface_0.vtu"
 
 #r1 is the cube object
 r1=OpenDataFile(object_directory+cube)
+r2=OpenDataFile(object_directory+sphere)
 
 #Create a Render view.
 renderView1 = GetActiveViewOrCreate('RenderView')
 
 #display r1,which is the cube, in the Render view
-r1_disp=Show(r1,renderView1) 
+r1_disp=Show(r1,renderView1)
+r2_disp=Show(r2,renderView1)
 
 
 # It is like left clicking once on the cube object, now any filter will be applied on this cube.
