@@ -131,12 +131,36 @@ def SaveSelection():
     active_selection = GetSelectionSource()
     ex_sel=ExtractSelection(Selection=active_selection)
     
-    
     #Saving procedure
     writer = XMLUnstructuredGridWriter(FileName="Mouse_Selected.vtu")
     writer.UpdatePipeline()
     del writer
-   
+
+   #Test for writing cells to a CSV-File [CellID, px, py, pz, -, -]
+   #I guess we can get rid of the last two rows in AdhoC++
+   #It still gives out an error but does what its supposed to do 
+def Export ():
+
+    active_selection = GetSelectionSource()
+    ex_sel = ExtractSelection(Selection=active_selection)
+
+    cell = CellCenters(ex_sel)
+    
+    #Creating a spreadSheetview 
+    spreadSheetView1 = CreateView('SpreadSheetView')
+    spreadSheetView1.ColumnToSort = ''
+    spreadSheetView1.BlockSize = 1024L
+    
+    #Creating a layout and assigning it the spreadSheetview1
+    layout2 = GetLayout()
+    layout2.AssignView(0, spreadSheetView1)
+    
+    #Display the ExtractSelection source in spreadSheetView on Layout 2
+    disp=Show(cell,spreadSheetView1)
+
+    #Export Spreadsheet
+    #You will need to adjust the path
+    ExportView('C:/Users/Darwin/Desktop/test.csv', view=spreadSheetView1)
     
    
         
