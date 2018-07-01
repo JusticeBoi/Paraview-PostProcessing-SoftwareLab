@@ -8,7 +8,10 @@
 ### Extracting Cells around the given sphere.
 
 ### We know that the center of the sphere is in 0.5,0.5,0.5 and the radius of sphere is 0.1.
-
+import sys
+sys.path.append("/home/oguz/Downloads/ParaView-5.5.2/lib/python2.7/site-packages/")
+sys.path.append("/home/oguz/Downloads/ParaView-5.5.2/lib/python2.7/site-packages/vtkmodules/")
+sys.path.append("/home/oguz/Downloads/ParaView-5.5.2/lib/")
 
 from paraview.simple import *
 
@@ -126,7 +129,7 @@ writer2 = XMLUnstructuredGridWriter(FileName="Cells_around_sphere_plane.vtu")
 writer2.UpdatePipeline()
 del writer2
 
-
+input()
 
 
 
